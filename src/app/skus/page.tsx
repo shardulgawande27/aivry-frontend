@@ -61,8 +61,6 @@ const items = [
 const page = () => {
   const [newItems, setNewItems] = useState([]);
 
-  console.log("env>>>>>>>>>>>", process.env.BACKEND_URL);
-
   useEffect(() => {
     const fetchSkus = async () => {
       try {

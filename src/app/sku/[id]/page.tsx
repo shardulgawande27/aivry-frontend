@@ -37,13 +37,7 @@ const data = [
   { month: "July", 2024: 3490, 2025: 4300 },
 ];
 
-interface SkuDetailsPageProps {
-  params: {
-    id: string;
-  };
-}
-
-const page = ({ params }: SkuDetailsPageProps) => {
+const page = (params: any) => {
   const { id } = params;
   const [sku, setSku] = useState<SKU | null>(null);
   const [loading, setLoading] = useState(true);
