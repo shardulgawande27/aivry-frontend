@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, use } from "react";
 import axios from "axios";
 import SidebarLayout from "../../sidebar-layout/layout";
 import {
@@ -37,8 +37,14 @@ const data = [
   { month: "July", 2024: 3490, 2025: 4300 },
 ];
 
-const page = (params: any) => {
-  const { id } = params;
+interface SkuDetailsPageProps {
+  params: {
+    id: string;
+  };
+}
+
+const page = ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = use(params);
   const [sku, setSku] = useState<SKU | null>(null);
   const [loading, setLoading] = useState(true);
 
