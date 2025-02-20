@@ -5,9 +5,16 @@ import React from "react";
 import { ProductCardWrapper } from "./styles";
 
 const ProductCard = (props: any) => {
-  const { imgUrl = "", skuName = " ", quantity = "" } = props;
+  const { item } = props;
+  const {
+    id = "",
+    image_url: imgUrl = "",
+    name: skuName = " ",
+    quantity = "",
+  } = item || {};
+
   return (
-    <ProductCardWrapper>
+    <ProductCardWrapper href={`/sku/${id}`}>
       <div className="image-container">
         <img src={imgUrl} alt={skuName} className="product-img" />
       </div>

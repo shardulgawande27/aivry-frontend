@@ -177,3 +177,17 @@ export const Email = styled.div`
   font-size: 12px;
   font-weight: 500;
 `;
+
+export const ChatBtnWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 500px;
+  width: 60px;
+  height: 60px;
+  background-color: #01ab56;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  cursor: pointer;
+`;

@@ -12,6 +12,7 @@ import {
   InfoContainer,
   Username,
   Email,
+  ChatBtnWrapper,
 } from "./styles";
 import { FiMenu } from "react-icons/fi";
 import { TbArrowBarToLeft } from "react-icons/tb";
@@ -20,6 +21,8 @@ import { IoIosArrowDown } from "react-icons/io";
 import profilePic from "./../../../public/assets/images/user.png";
 import Image from "next/image";
 import useSidebar from "./useSidebar";
+import Link from "next/link";
+import { MdOutlineMessage } from "react-icons/md";
 
 const items = [
   { label: "Dashboard", link: "/dashboard" },
@@ -48,7 +51,10 @@ export default function SidebarLayout({
       <Sidebar $isOpen={isOpen}>
         {isOpen && (
           <>
-            <h2 className="title">Inventory App</h2>
+            <Link href="/dashboard">
+              {" "}
+              <h2 className="title">Aivry</h2>
+            </Link>
             {items.map((item, index) => {
               const $isActive = pathname === item.link;
               return (
@@ -71,7 +77,11 @@ export default function SidebarLayout({
       <MainContentWrapper>
         <Header $isOpen={isOpen}>
           <div className="header-title">
-            <h1>Dashboard</h1>
+            {items.find((item) => item.link === pathname)?.label ? (
+              <h1>{items.find((item) => item.link === pathname)?.label}</h1>
+            ) : (
+              <div />
+            )}
           </div>
 
           <div className="header-content">
@@ -117,6 +127,9 @@ export default function SidebarLayout({
           </div>
         </Header>
         <MainContent>{children}</MainContent>
+        <ChatBtnWrapper>
+          <MdOutlineMessage size={30} />
+        </ChatBtnWrapper>
       </MainContentWrapper>
     </Container>
   );

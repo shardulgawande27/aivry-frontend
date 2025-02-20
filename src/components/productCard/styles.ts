@@ -1,6 +1,6 @@
 import styled from "styled-components";
-
-export const ProductCardWrapper = styled.div`
+import Link from "next/link";
+export const ProductCardWrapper = styled(Link)`
   display: flex;
   flex-direction: column;
   background-color: #12151d;
