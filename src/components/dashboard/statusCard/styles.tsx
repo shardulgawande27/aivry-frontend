@@ -7,7 +7,7 @@ export const StatusCardWrapper = styled.div`
   background-color: #12151d;
   border-radius: 10px;
   gap: 8px;
-  flex-grow: 1;
+  flex: 0 1 350px;
 
   .status-icon {
     width: 40px;

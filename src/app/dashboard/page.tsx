@@ -19,21 +19,21 @@ const items = [
   },
   {
     image: redAlert,
-    numberLabel: "12,300",
+    numberLabel: "37",
     label: "Items",
-    bottomText: "To Items in the stock",
+    bottomText: "Items below threshold",
   },
   {
     image: yellowAlert,
-    numberLabel: "12,300",
+    numberLabel: "50",
     label: "Items",
-    bottomText: "To Items in the stock",
+    bottomText: "items need restocking",
   },
   {
     image: timer,
-    numberLabel: "12,300",
+    numberLabel: "73",
     label: "Items",
-    bottomText: "To Items in the stock",
+    bottomText: "About to expire",
   },
 ];
 

@@ -40,14 +40,14 @@ export const MainContent = styled.div`
   border-radius: 12px;
 `;
 
-export const StyledLink = styled(Link)<{ isActive: boolean }>`
+export const StyledLink = styled(Link)<{ $isActive: boolean }>`
   color: white;
   text-decoration: none;
   padding: 10px;
   display: block;
   width: 100%;
   text-align: left;
-  background: ${({ isActive }) => (isActive ? "#01AB56" : "transparent")};
+  background: ${({ $isActive }) => ($isActive ? "#01AB56" : "transparent")};
   border-radius: 8px;
   &:hover {
     background: #01ab56;

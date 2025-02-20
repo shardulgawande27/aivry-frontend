@@ -23,10 +23,10 @@ import useSidebar from "./useSidebar";
 
 const items = [
   { label: "Dashboard", link: "/dashboard" },
+  { label: "SKUs", link: "/skus" },
   { label: "Create SKU", link: "/create-sku" },
   { label: "Best Performing SKU", link: "/best-sku" },
   { label: "Worst Performing SKU", link: "/worst-sku" },
-  { label: "SKUs", link: "/skus" },
 ];
 
 export default function SidebarLayout({
@@ -35,8 +35,6 @@ export default function SidebarLayout({
   children: React.ReactNode;
 }) {
   const { pathname } = useSidebar();
-
-  console.log("pathnaem>>>>>>>>..", pathname);
 
   const [isOpen, setIsOpen] = useState(true);
   const [isDropdown, setIsDropdown] = useState(false);
@@ -52,12 +50,12 @@ export default function SidebarLayout({
           <>
             <h2 className="title">Inventory App</h2>
             {items.map((item, index) => {
-              const isActive = pathname === item.link;
+              const $isActive = pathname === item.link;
               return (
                 <StyledLink
                   href={item.link}
                   key={`link-${index}`}
-                  isActive={isActive}
+                  $isActive={$isActive}
                 >
                   {item.label}
                 </StyledLink>
