@@ -43,7 +43,7 @@ interface SkuDetailsPageProps {
   };
 }
 
-const SkuDetailsPage = ({ params }: SkuDetailsPageProps) => {
+const page = ({ params }: SkuDetailsPageProps) => {
   const { id } = params;
   const [sku, setSku] = useState<SKU | null>(null);
   const [loading, setLoading] = useState(true);
@@ -129,4 +129,4 @@ const SkuDetailsPage = ({ params }: SkuDetailsPageProps) => {
   );
 };
 
-export default SkuDetailsPage;
+export default page;
